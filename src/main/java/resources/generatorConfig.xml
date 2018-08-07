@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry location="/Users/wangyixian/Documents/mybatis_generator/mysql-connector-java-5.1.13-bin.jar" />
+
+	<context id="MySQLTables" targetRuntime="MyBatis3">
+
+		<commentGenerator type="com.edo.mybatis.generator.EdoCommentGenerator">
+		</commentGenerator>
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://121.41.10.143:3306/vms?useUnicode=true&amp;characterEncoding=utf8"
+			userId="dev" password="dev">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.edo.vms.dto.generator" targetProject="/Users/wangyixian/workspace/edo">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="com.edo.vms.dao.generator" targetProject="/Users/wangyixian/workspace/edo">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER" targetPackage="com.edo.vms.dao.generator" targetProject="/Users/wangyixian/workspace/edo">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		
+		<table schema="vms" tableName="vms_request" domainObjectName="VisitRequest"
+		enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+		enableSelectByExample="false" selectByExampleQueryId="false">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		
+		<table schema="vms" tableName="vms_request_visitor" domainObjectName="RequestVisitor"
+		enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+		enableSelectByExample="false" selectByExampleQueryId="false">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		
+		<table schema="vms" tableName="vms_request_place" domainObjectName="RequestPlace"
+		enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+		enableSelectByExample="false" selectByExampleQueryId="false">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		
+		<table schema="vms" tableName="vms_visitor_place" domainObjectName="VisitorPlace"
+		enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+		enableSelectByExample="false" selectByExampleQueryId="false">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		
+		<table schema="vms" tableName="vms_place" domainObjectName="Place"
+		enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+		enableSelectByExample="false" selectByExampleQueryId="false">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		
+		<table schema="vms" tableName="vms_visitor" domainObjectName="Visitor"
+		enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+		enableSelectByExample="false" selectByExampleQueryId="false">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		
+		<table schema="vms" tableName="vms_card" domainObjectName="Card"
+		enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+		enableSelectByExample="false" selectByExampleQueryId="false">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		
+		<table schema="vms" tableName="vms_card_record" domainObjectName="CardRecord"
+		enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+		enableSelectByExample="false" selectByExampleQueryId="false">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		
+		<table schema="vms" tableName="vms_gate_reader" domainObjectName="GateReader"
+		enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+		enableSelectByExample="false" selectByExampleQueryId="false">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+
+	</context>
+</generatorConfiguration>
